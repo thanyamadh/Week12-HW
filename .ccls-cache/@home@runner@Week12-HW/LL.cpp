@@ -16,7 +16,6 @@ LL::~LL()
   monster* t = hol;
   monster* temp = t;
   int i;
-  cout<<"--- destructor ---"<<endl;
   for(i=0;i<size;i++)
   {
     temp = t;            
@@ -30,7 +29,7 @@ void LL::show_all()
 {
   monster* t=hol;
   int i;
-  cout<<"--- List ---"<<endl;
+  cout<<"\n*** Baby monters list ***"<<endl;
   for(i=0;i<size;i++)
   {
     t->show_node();
@@ -55,4 +54,12 @@ int LL:: atk_all() //ทุกตัวโจมตีบอส
     mon = mon->move_next();
   }
   return pt_all;
+}
+
+void LL:: monster_atk(int dm_boss,monster *&x) //บอสตีทุกตัว
+{
+  int i;
+  monster* mon = hol;
+  dm_boss=dm_boss;
+  mon->monster_atk(x,dm_boss);
 }

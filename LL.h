@@ -6,6 +6,7 @@ class LL
     void add_node(monster*&);
     void show_all();
     int atk_all();
+    void monster_atk(int ,monster*&);
     LL();
     ~LL();   
 };
